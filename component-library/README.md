@@ -69,10 +69,10 @@ The useAsyncFetch hook returns a tuple containing four elements:
 
  - **error** - an object representing any error that occurred during the request, or null if there was no error.
  - **status** - an enum value indicating the status of the request, which can be one of the following:
-ComponentStatus.**fetching** - the request is currently being fetched.
-ComponentStatus.**loaded** - the request has been successfully fetched.
-ComponentStatus.**error** - an error occurred while fetching the request.
-ComponentStatus.**reFetching** - the request is being re-fetched after an error occurred.
+     - ComponentStatus.**fetching** - the request is currently being fetched.
+     - ComponentStatus.**loaded** - the request has been successfully fetched.
+     - ComponentStatus.**error** - an error occurred while fetching the request.
+     - ComponentStatus.**reFetching** - the request is being re-fetched after an error occurred.
  - **data** - the data returned by the API endpoint, or null if the data has not yet been fetched.
  - **retry** - a function that can be called to retry the request if an error occurred.
 
