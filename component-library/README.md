@@ -55,6 +55,26 @@ Example usage:
 
 In the example above, the **access** object contains boolean values for each permission that is required to access a specific endpoint. The **ConditionalRender** component is used to render each permission based on the values in the **access** object. If the permission is not present in the **access** object, then nothing is rendered. If the permission is present and **negated** is false, then the corresponding **children** are rendered. If **negated** is true, then the corresponding **children** are rendered only when the permission is not present in the **access** object.
 
+## Hooks
+
+### useAsyncFetch
+The **useAsyncFetch** hook is a custom React hook that can be used for making GET requests to an API endpoint asynchronously.
+
+**Parameters:**
+ - **requestFunction**: a function that returns a Promise representing the GET request to the API endpoint. The function should return null if the request should not be made (e.g. if a condition is not met).
+ - **skip**: an optional boolean parameter indicating whether the initial fetch should be skipped. If skip is true, the hook will immediately set the status to ComponentStatus.loaded. Otherwise, the hook will fetch the data when the component mounts.
+
+**Return Value**
+The useAsyncFetch hook returns a tuple containing four elements:
+
+ - **error** - an object representing any error that occurred during the request, or null if there was no error.
+ - **status** - an enum value indicating the status of the request, which can be one of the following:
+ComponentStatus.**fetching** - the request is currently being fetched.
+ComponentStatus.**loaded** - the request has been successfully fetched.
+ComponentStatus.**error** - an error occurred while fetching the request.
+ComponentStatus.**reFetching** - the request is being re-fetched after an error occurred.
+ - **data** - the data returned by the API endpoint, or null if the data has not yet been fetched.
+ - **retry** - a function that can be called to retry the request if an error occurred.
 
 ## Utility functions
 
