@@ -59,6 +59,6 @@ In the example above, the **access** object contains boolean values for each per
 ## Utility functions
 
 ### String utils
- - isStringNullOrWhiteSpace
- - capitalizeFirstLetter
- - joinStringsWithAnd
+ - isStringNullOrWhiteSpace - Checks if string is null or whitespace
+ - capitalizeFirstLetter - Capitalizes first letter of string
+ - joinStringsWithAnd - Joins a list of strings into one string separated with comma and 'and'
