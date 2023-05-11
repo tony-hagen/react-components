@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "importHelpers": true,
+        "module": "ES6",
+        "outDir": "dist",
+        "rootDir": "src",
+        "baseUrl": "./",
+        "strict": false,
+        "target": "ES6",
+        "composite": false,
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "noImplicitAny": false,
+        "skipLibCheck": true,
+        "paths": {
+            "timesaver-common-components": ["./src/index.ts"]
+        },
+        "experimentalDecorators": true,
+    },
+    "include": [
+        "src/**/*",
+        "./css-modules.d.ts",
+    ],
+    "exclude": [
+        "src/**/*.stories.*",
+        "src/**/__stories__/*"
+    ]
+}
