@@ -18,3 +18,39 @@ Parameters:
 Return Value:
 The ConditionalRender function returns a ReactElement that represents the conditional rendering of its children based on the access permissions specified in the access object.
 
+Example usage: 
+
+    import React from 'react';
+    import ConditionalRender, { AccessOptions, IConditionalRenderProps } from './ConditionalRender';
+
+    function App() {
+    const access: IConditionalRenderProps['access'] = {
+        canGet: true,
+        canPost: false,
+        canPut: true,
+        canPatch: false,
+        canDelete: true,
+    };
+
+    return (
+        <div>
+        <ConditionalRender access={access} condition={AccessOptions.canGet}>
+            <p>You have permission to GET the data</p>
+        </ConditionalRender>
+        <ConditionalRender access={access} condition={AccessOptions.canPost}>
+            <p>You have permission to POST the data</p>
+        </ConditionalRender>
+        <ConditionalRender access={access} condition={AccessOptions.canPut}>
+            <p>You have permission to PUT the data</p>
+        </ConditionalRender>
+        <ConditionalRender access={access} condition={AccessOptions.canPatch}>
+            <p>You have permission to PATCH the data</p>
+        </ConditionalRender>
+        <ConditionalRender access={access} condition={AccessOptions.canDelete} negated={true}>
+            <p>You don't have permission to DELETE the data</p>
+        </ConditionalRender>
+        </div>
+    );
+    }
+    
+In the example above, the access object contains boolean values for each permission that is required to access a specific endpoint. The ConditionalRender component is used to render each permission based on the values in the access object. If the permission is not present in the access object, then nothing is rendered. If the permission is present and negated is false, then the corresponding children are rendered. If negated is true, then the corresponding children are rendered only when the permission is not present in the access object.

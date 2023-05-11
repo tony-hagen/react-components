@@ -2,7 +2,7 @@
   "name": "timesaver-common-components",
   "description": "Tony's react component library",
   "author": "Tony Hagen",
-  "version": "0.1.16",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
