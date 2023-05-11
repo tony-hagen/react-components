@@ -82,3 +82,12 @@ The useAsyncFetch hook returns a tuple containing four elements:
  - isStringNullOrWhiteSpace - Checks if string is null or whitespace
  - capitalizeFirstLetter - Capitalizes first letter of string
  - joinStringsWithAnd - Joins a list of strings into one string separated with comma and 'and'
+
+### Date utils
+ - formatDateToString - formats date to string in the specified date format
+ - sortByDate - Comparator for dates
+ - isValidDate - Checks if date is a valid date object
+
+### Object utils
+ - checkObjectEquality - Deep check for equality in two specified objects with specified types
+ - checkEquality - Deep check for equality in two specified objects with unspecified types

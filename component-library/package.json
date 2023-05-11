@@ -2,7 +2,7 @@
   "name": "timesaver-common-components",
   "description": "Tony's react component library",
   "author": "Tony Hagen",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -72,5 +72,7 @@
     "webpack-cli": "^4.5.0",
     "webpack-merge": "^5.7.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "date-fns": "2.30.0"
+  }
 }
