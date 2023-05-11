@@ -54,3 +54,11 @@ Example usage:
     }
 
 In the example above, the **access** object contains boolean values for each permission that is required to access a specific endpoint. The **ConditionalRender** component is used to render each permission based on the values in the **access** object. If the permission is not present in the **access** object, then nothing is rendered. If the permission is present and **negated** is false, then the corresponding **children** are rendered. If **negated** is true, then the corresponding **children** are rendered only when the permission is not present in the **access** object.
+
+
+## Utility functions
+
+### String utils
+ - isStringNullOrWhiteSpace
+ - capitalizeFirstLetter
+ - joinStringsWithAnd
